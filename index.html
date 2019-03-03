@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link href="main.css" rel="stylesheet">
+    <title>Pop-up info box — web components</title>
+</head>
+
+<body>
+    <h1>Pop-up info widget - web components</h1>
+
+    <form>
+        <div>
+            <label for="cvc">Enter your CVC <popup-info img="client/components/pop-up-info/img/alt.png"
+                    data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card.">
+            </label>
+            <input type="text" id="cvc">
+        </div>
+    </form>
+
+    <script type="module">
+        import { run } from "./client/app.js"
+
+        run();
+    </script>
+
+</body>
+
+</html>
