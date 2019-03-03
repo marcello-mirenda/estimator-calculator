@@ -12,6 +12,10 @@ L'applicazione consuma una API RESTful implemetata con PHP.
 
 I dati solo salvati su un database MySQL.
 
+## Contatti
+
+Slack clicca [qui](https://join.slack.com/t/vanillajs-workspace/shared_invite/enQtNTY1NzU4MzU2NDM2LTMxNTRlMjA2MWY3MGMwMTAwZTExNTViMGExMDQwNGVhNzJjZWYxOWE0NjNmOWFmMTQxYmUwNGY1YTA5NTY5YWE)
+
 ### UI
 
 Il file Estimate *Calculator Page Wireframe.pdf* mostra la user interface implementata.
