@@ -1,0 +1,18 @@
+.site-item-view {
+    border-radius: 5px;
+    background-color: darkcyan;
+    min-width: 200px;
+    margin: 0 5px 5px 0;
+}
+
+.site-item-view-description {
+    padding: 10px 10px 0px 10px;
+    color: white;
+}
+
+.site-item-view-price {
+    padding: 0px 10px 10px 10px;
+    text-align: right;
+    color: white;
+    font-size: 2.5em
+}

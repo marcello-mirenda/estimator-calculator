@@ -4,24 +4,22 @@
 <head>
     <meta charset="utf-8">
     <link href="main.css" rel="stylesheet">
-    <title>Pop-up info box — web components</title>
+    <title>Calcolo preventivo</title>
+    <site-items-view>
+        <template>
+            <site-item-view data-description="Vetrina" data-price=250></site-item-view>
+            <site-item-view data-description="E-Commerce" data-price=630></site-item-view>
+            <site-item-view data-description="Booking" data-price=300></site-item-view>
+            <site-item-view data-description="Vetrina" data-price=250></site-item-view>
+            <site-item-view data-description="E-Commerce" data-price=630></site-item-view>
+            <site-item-view data-description="Booking" data-price=300></site-item-view>
+        </template>
+    </site-items-view>
 </head>
 
 <body>
-    <h1>Pop-up info widget - web components</h1>
-
-    <form>
-        <div>
-            <label for="cvc">Enter your CVC <popup-info img="client/components/pop-up-info/img/alt.png"
-                    data-text="Your card validation code (CVC) is an extra security feature — it is the last 3 or 4 numbers on the back of your card.">
-            </label>
-            <input type="text" id="cvc">
-        </div>
-    </form>
-
     <script type="module">
         import { run } from "./client/app.js"
-
         run();
     </script>
 
