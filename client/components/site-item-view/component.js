@@ -2,15 +2,17 @@ class SiteItemView extends HTMLElement {
     constructor() {
         super();
 
-        const shadow = this.attachShadow({mode: 'open'});
+        const shadow = this.attachShadow({ mode: 'open' });
 
         this._wrapper = document.createElement('div');
         this._wrapper.setAttribute('class', 'site-item-view');
 
+        this.info = this.getAttribute('data-info');
+
         this._description = document.createElement('div');
         this._description.setAttribute('class', 'site-item-view-description');
         const textDescription = this.getAttribute('data-description');
-        this._description.textContent = textDescription;  
+        this._description.textContent = textDescription;
         this._wrapper.appendChild(this._description);
 
         this._price = document.createElement('div');
@@ -18,15 +20,32 @@ class SiteItemView extends HTMLElement {
         const textPrice = this.getAttribute('data-price');
         this._price.textContent = textPrice;
         this._wrapper.appendChild(this._price);
-        
+
         const cssLink = document.createElement('link');
         cssLink.setAttribute('href', new URL(componentBaseUrl.pathname + '/site-item-view/component.css', componentBaseUrl));
         cssLink.setAttribute('rel', 'stylesheet');
 
         shadow.appendChild(cssLink);
 
-
         shadow.appendChild(this._wrapper);
+    }
+
+    connectedCallback() {
+        if (this.isConnected) {
+            if (this.parentNode.nodeName === "SITE-ITEMS-VIEW") {
+                this.parentNode.dispatchEvent(new CustomEvent('newSiteItem', {
+                    detail: this
+                }));
+            }
+        }
+    }
+
+    get info() {
+        return this.data;
+    }
+
+    set info(value) {
+        this.data = value;
     }
 
     get margin() {
@@ -52,8 +71,9 @@ class SiteItemView extends HTMLElement {
     set price(value) {
         this._price.textContent = value;
     }
+
 }
 
 export function defineSiteItemView() {
     customElements.define('site-item-view', SiteItemView);
-  }
+}

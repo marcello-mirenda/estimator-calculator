@@ -1,3 +1,11 @@
 body {
     font-family: sans-serif;
 }
+
+.main-layout {
+    display: flex;
+}
+
+.main-layout > .layout-item {
+    flex: auto 1;
+}

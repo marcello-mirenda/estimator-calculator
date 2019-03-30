@@ -7,21 +7,20 @@
     <title>Calcolo preventivo</title>
     <div>
         <h4>Sito</h4>
-        <site-items-view>
-            <site-item-view data-description="Vetrina" data-price=250></site-item-view>
-            <site-item-view data-description="E-Commerce" data-price=630></site-item-view>
-            <site-item-view data-description="Booking" data-price=300></site-item-view>
-            <site-item-view data-description="Vetrina" data-price=250></site-item-view>
-            <site-item-view data-description="E-Commerce" data-price=630></site-item-view>
-            <site-item-view data-description="Booking" data-price=300></site-item-view>
-        </site-items-view>
+        <div class="main-layout">
+            <site-items-view class="layout-item">
+            </site-items-view>
+            <site-details-view class="layout-item" data-title="Vetrina">
+            </site-details-view>
+        </div>
     </div>
 </head>
 
 <body>
     <script type="module">
-        import { run } from "./client/app.js"
-        run();
+        import { run, test } from "./client/app.js"
+        const app = run();
+        test();
     </script>
 
 </body>
